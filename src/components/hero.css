@@ -1,6 +1,6 @@
 .hero {
     height: 100vh;
-    background: url('src/assets/background.png') center/cover no-repeat;
+    background: url('../assets/background.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
