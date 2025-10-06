@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
 .hero {
     height: 100vh;
     background: url('../assets/background.png') center/cover no-repeat;
@@ -9,8 +11,9 @@
 }
 
 .hero-title {
-    font-size: 3rem;
-    font-weight: 700;
+    font-family: 'Alex Brush', cursive;
+    font-size: 6rem;
+    font-weight: 400;
 }
 
 .hero-date {
