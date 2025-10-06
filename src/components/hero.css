@@ -25,7 +25,7 @@
 
 .hero-button {
     padding: 0.8rem 2rem;
-    background-color: #f6a5a5;
+    background-color: #d497d5;
     color: #fff;
     border-radius: 8px;
     text-decoration: none;
@@ -34,5 +34,5 @@
 }
 
 .hero-button:hover {
-    background-color: #e77c7c;
+    background-color: #a777a8;
 }
