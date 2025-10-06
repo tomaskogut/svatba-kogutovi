@@ -5,7 +5,7 @@ function App() {
     <main>
       <header>
         <h1>Naše svatba</h1>
-        <p>30. srpna 2025 — Zámek Kačina</p>
+        <p>2. května 2026 — Společenský dům Hodslavice</p>
       </header>
 
       <section>
