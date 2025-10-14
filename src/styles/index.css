@@ -1,20 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom CSS */
 :root {
-    --font-main: "Poppins", sans-serif;
-    --color-bg: #fffaf8;
-    --color-accent: #a87c7c;
-}
-
-body {
-    margin: 0;
-    font-family: var(--font-main), serif;
-    background-color: var(--color-bg);
-    color: #333;
-    line-height: 1.6;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+    --color-accent: #d497d5;
 }
