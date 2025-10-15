@@ -1,16 +1,7 @@
-import backgroundImg from '../assets/background.png'
-
 export default function Hero() {
   return (
-    <section
-      className="h-screen flex items-center justify-center text-center text-black"
-      style={{
-        backgroundImage: `url(${backgroundImg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div>
+    <section id="hero" className="items-center justify-center">
+      <div className="text-center text-black">
         <h1 className="text-[6rem] font-alexbrush">Tomáš & Markéta</h1>
         <p className="text-xl my-2">2.5.2026, Hodslavice</p>
         <p className="text-lg mb-8">Srdečně vás zveme na naši svatbu</p>
