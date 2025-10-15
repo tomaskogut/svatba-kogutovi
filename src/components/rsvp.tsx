@@ -1,9 +1,6 @@
 export default function Rsvp() {
   return (
-    <section
-      id="rsvp"
-      className="min-h-screen flex flex-col items-center justify-center bg-white text-center px-4"
-    >
+    <section id="rsvp" className="flex flex-col items-center justify-center text-center px-4">
       <h2 className="text-3xl font-semibold mb-4">Potvrďte svou účast</h2>
       <p className="mb-6">Dejte nám vědět, jestli dorazíte – budeme se těšit!</p>
       <form className="flex flex-col gap-4 max-w-sm w-full">
