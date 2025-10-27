@@ -1,8 +1,8 @@
 export default function Hero() {
   return (
     <section id="hero" className="items-center justify-center">
-      <div className="text-center text-black">
-        <h1 className="text-[6rem] font-alexbrush">Tomáš & Markéta</h1>
+      <div className="text-center text-black overflow-hidden">
+        <h1 className="text-[6rem] font-alexbrush truncate">Tomáš & Markéta</h1>
         <p className="text-xl my-2">2.5.2026, Hodslavice</p>
         <p className="text-lg mb-8">Srdečně vás zveme na naši svatbu</p>
         <a
@@ -11,6 +11,7 @@ export default function Hero() {
         >
           Potvrď účast
         </a>
+        <div className="h-[2000px]"></div>
       </div>
     </section>
   )
