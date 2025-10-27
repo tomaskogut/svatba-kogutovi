@@ -2,7 +2,7 @@ import Hero from '../components/hero.tsx'
 import Rsvp from '../components/rsvp.tsx'
 import Details from '../components/details.tsx'
 import Footer from '../components/footer.tsx'
-import Layout from '../components/Layout.tsx'
+import Layout from '../components/layout.tsx'
 import bgLeft from '../assets/bg_left.png'
 import bgRight from '../assets/bg_right.png'
 
