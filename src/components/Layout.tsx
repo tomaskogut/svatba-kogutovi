@@ -8,24 +8,22 @@ type LayoutProps = {
 
 export default function Layout({ children, leftImage, rightImage }: LayoutProps) {
   return (
-    <div className="relative flex flex-col min-h-screen">
-      {leftImage && (
+    <div className="relative">
+      <div className="fixed inset-0 pointer-events-none flex">
         <div
-          className="hidden md:block fixed top-0 left-0 h-screen w-1/4 bg-cover bg-center border-4 border-blue-500 bg-blue-100/30"
+          className="flex-1 bg-cover bg-center"
           style={{ backgroundImage: `url(${leftImage})` }}
         />
-      )}
 
-      {rightImage && (
+        <div className="w-[768px] max-w-[1200px]" />
+
         <div
-          className="hidden md:block fixed top-0 right-0 h-screen w-1/4 bg-cover bg-center border-4 border-green-500 bg-green-100/30"
+          className="flex-1 bg-cover bg-center "
           style={{ backgroundImage: `url(${rightImage})` }}
         />
-      )}
-
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 border-red-500 bg-red-100/30">
-        {children}
       </div>
+
+      <div className="relative z-10 w-[768px] max-w-[1200px] mx-auto min-h-screen">{children}</div>
     </div>
   )
 }
