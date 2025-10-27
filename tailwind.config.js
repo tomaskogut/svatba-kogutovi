@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         alexbrush: ['"Alex Brush"', 'cursive'],
+        sans: ['"Playfair Display"', 'serif'],
       },
     },
   },
