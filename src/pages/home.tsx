@@ -2,11 +2,16 @@ import Hero from '../components/hero.tsx'
 import Rsvp from '../components/rsvp.tsx'
 import Details from '../components/details.tsx'
 import Footer from '../components/footer.tsx'
-import Layout from '../components/Layout.tsx'
+import Layout from '../components/layout.tsx'
 import bgLeft from '../assets/bg_left.png'
 import bgRight from '../assets/bg_right.png'
+import { useEffect } from 'react'
 
-export default function Home() {
+export function Home() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
+
   return (
     <Layout leftImage={bgLeft} rightImage={bgRight}>
       <main className="scroll-smooth flex flex-col gap-16">
