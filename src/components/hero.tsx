@@ -8,7 +8,12 @@ export default function Hero() {
           opatřím mu rovnocennou oporu."
         </p>
         <p className="text-sm leading-loose">Genesis 2.18</p>
-        <h1 className="text-[6rem] font-alexbrush truncate m-8">Tomáš & Markéta</h1>
+
+        <div className="m-8 text-[6rem] font-alexbrush text-center flex justify-center items-center gap-4">
+          <span className="inline-block animate-fadeInLeft">Tomáš</span>
+          <span className="inline-block animate-fadeIn text-[4rem]">&</span>
+          <span className="inline-block animate-fadeInRight">Markéta</span>
+        </div>
 
         <p className="text-xl ">
           S radostí Vás zveme <br /> na slavnostní bohoslužbu,
