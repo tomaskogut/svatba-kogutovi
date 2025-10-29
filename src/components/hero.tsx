@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Hero() {
   return (
     <section id="hero" className="items-center justify-center">
@@ -22,18 +24,27 @@ export default function Hero() {
 
         <p className="text-4xl font-alexbrush m-7">2.5.2026</p>
         <p className="text-xl ">Evangelický kostel v Hodslavicích</p>
-        <p className="text-base mb-20">11 hodin</p>
+        <p className="text-base mb-20">v 11 hodin</p>
 
         <div className="flex justify-center gap-4">
-          <a className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]">
+          <a
+            href={'#details'}
+            className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]"
+          >
             Více info
           </a>
-          <a className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]">
+          <a
+            href={'#rsvp'}
+            className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]"
+          >
             Potvrď účast
           </a>
-          <a className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]">
+          <Link
+            to="/gallery"
+            className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]"
+          >
             Galerie
-          </a>
+          </Link>
         </div>
 
         <div className="h-[256px]"></div>
