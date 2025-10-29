@@ -9,3 +9,6 @@
 :root {
     --color-accent: #d497d5;
 }
+html {
+    scroll-behavior: smooth;
+}

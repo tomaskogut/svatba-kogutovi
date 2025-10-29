@@ -6,6 +6,7 @@ export default function Rsvp() {
       <form className="flex flex-col gap-4 max-w-sm w-full">
         <input type="text" placeholder="Vaše jméno" className="border rounded-lg p-3" />
         <input type="email" placeholder="E-mail" className="border rounded-lg p-3" />
+        <input type="text" placeholder="Počet osob" className="border rounded-lg p-3" />
         <button className="bg-[#d497d5] text-white rounded-lg py-3 hover:bg-[#a777a8] transition">
           Odeslat
         </button>
