@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import BackButton from './backButton.tsx'
 
 export type RsvpRecord = {
   _id: string
@@ -45,6 +46,7 @@ export default function RsvpTable() {
 
   return (
     <div className="overflow-x-auto max-w-4xl mx-auto my-8">
+      <BackButton />
       <table className="min-w-full border border-gray-300">
         <thead>
           <tr className="bg-[#d497d5] text-white">
