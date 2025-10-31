@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="hero" className="items-center justify-center">
       <div className="text-center text-black overflow-hidden">
-        <p className="text-xl leading-relaxed mt-20">
+        <p className="text-xl leading-relaxed mt-28">
           'Hospodin Bůh také řekl: <br />
           "Není dobré, aby člověk byl sám: <br />
           opatřím mu rovnocennou oporu."

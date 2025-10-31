@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <section className="items-center justify-center text-center">
       <hr />
-      <div className="text-[#d497d5] mt-1 mb-1 flex justify-center items-center gap-2">
+      <div className="text-[#d497d5] m-2 flex justify-center items-center gap-2">
         <span>© 2025 Tomáš Kogut |</span>
         <a href="https://github.com/tomaskogut" target="_blank" rel="noopener noreferrer">
           <img
@@ -27,6 +27,7 @@ export default function Footer() {
           />
         </a>
       </div>
+      <div className="m-8"></div>
     </section>
   )
 }
