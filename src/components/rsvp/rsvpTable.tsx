@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import BackButton from './backButton.tsx'
+import BackButton from '../backButton.tsx'
+import RsvpTableRow from './rsvpTableRow.tsx'
 
-export type RsvpRecord = {
+type RsvpRecord = {
   _id: string
   name: string
   email: string
@@ -10,6 +11,8 @@ export type RsvpRecord = {
   note?: string
   createdAt: string
 }
+
+export type { RsvpRecord }
 
 export default function RsvpTable() {
   const [records, setRecords] = useState<RsvpRecord[]>([])
@@ -45,32 +48,22 @@ export default function RsvpTable() {
   }
 
   return (
-    <div className="overflow-x-auto max-w-4xl mx-auto my-8">
+    <div className="max-w-6xl mx-auto my-8 px-4">
       <BackButton />
-      <table className="min-w-full border border-gray-300">
-        <thead>
-          <tr className="bg-[#d497d5] text-white">
-            <th className="px-4 py-2">Jméno / Rodina</th>
-            <th className="px-4 py-2">Email</th>
-            <th className="px-4 py-2">Dospělí</th>
-            <th className="px-4 py-2">Děti</th>
-            <th className="px-4 py-2">Poznámky</th>
-            <th className="px-4 py-2">Přidáno</th>
-          </tr>
-        </thead>
-        <tbody>
-          {records.map((r) => (
-            <tr key={r._id} className="border-t">
-              <td className="px-4 py-2">{r.name}</td>
-              <td className="px-4 py-2">{r.email}</td>
-              <td className="px-4 py-2">{r.adults}</td>
-              <td className="px-4 py-2">{r.kids}</td>
-              <td className="px-4 py-2">{r.note}</td>
-              <td className="px-4 py-2">{new Date(r.createdAt).toLocaleString()}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+
+      <div className="grid grid-cols-5 gap-4 bg-[#d497d5] text-white px-4 py-3 rounded-t-lg font-semibold">
+        <div>Jméno</div>
+        <div>Email</div>
+        <div className="text-center">Dospělí</div>
+        <div className="text-center">Děti</div>
+        <div>Poznámky</div>
+      </div>
+
+      <div className="border border-gray-300 rounded-b-lg overflow-hidden">
+        {records.map((record, idx) => (
+          <RsvpTableRow key={record._id} record={record} index={idx} />
+        ))}
+      </div>
     </div>
   )
 }
