@@ -6,6 +6,7 @@ import Footer from '../components/footer.tsx'
 import Layout from '../components/layout.tsx'
 import bgLeft from '../assets/bg_left.png'
 import bgRight from '../assets/bg_right.png'
+import bgImage from '../assets/background.png'
 
 export function Home() {
   const [visible, setVisible] = useState(false)
@@ -28,7 +29,7 @@ export function Home() {
   }
 
   return (
-    <Layout leftImage={bgLeft} rightImage={bgRight}>
+    <Layout leftImage={bgLeft} rightImage={bgRight} mobileImage={bgImage}>
       <main className="scroll-smooth flex flex-col gap-16">
         <Hero />
         <Rsvp />

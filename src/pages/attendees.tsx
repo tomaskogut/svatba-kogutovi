@@ -30,9 +30,9 @@ export default function Attendees() {
   if (!authorized) {
     return (
       <Layout leftImage={bgLeft} rightImage={bgRight}>
-        <main className="flex flex-col items-center justify-center min-h-screen">
+        <main className="flex flex-col py-20 min-h-screen">
           <BackButton />
-          <h1 className="text-3xl font-alexbrush mb-6">Přístup pro organizátory</h1>
+          <h1 className="text-[3rem] font-alexbrush text-center mb-5">Přístup pro organizátory</h1>
           <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4">
             <input
               type="password"
@@ -43,7 +43,7 @@ export default function Attendees() {
             />
             <button
               type="submit"
-              className="bg-[#d497d5] text-white px-4 py-2 rounded hover:bg-[#b47ab3]"
+              className="bg-[#d497d5] text-white px-4 py-2 rounded hover:bg-[#b47ab3] m-5"
             >
               Přihlásit se
             </button>

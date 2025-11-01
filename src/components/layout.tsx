@@ -4,12 +4,13 @@ type LayoutProps = {
   children: React.ReactNode
   leftImage?: string
   rightImage?: string
+  mobileImage?: string
 }
 
-export default function Layout({ children, leftImage, rightImage }: LayoutProps) {
+export default function Layout({ children, leftImage, rightImage, mobileImage }: LayoutProps) {
   return (
     <div className="relative">
-      <div className="fixed inset-0 pointer-events-none flex">
+      <div className="hidden lg:flex fixed inset-0 pointer-events-none ">
         <div
           className="flex-1 bg-cover bg-center"
           style={{
@@ -32,9 +33,18 @@ export default function Layout({ children, leftImage, rightImage }: LayoutProps)
         />
       </div>
 
+      <div
+        className="lg:hidden fixed inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${mobileImage || leftImage || rightImage})`,
+        }}
+      />
+
       <div className="fixed inset-0 bg-[#d497d5]/5 pointer-events-none" />
 
-      <div className="relative z-10 w-[768px] max-w-[1200px] mx-auto min-h-screen">{children}</div>
+      <div className="relative z-10 w-full lg:w-[768px] lg:max-w-[1200px] mx-auto min-h-screen">
+        {children}
+      </div>
     </div>
   )
 }
