@@ -1,7 +1,7 @@
 import bgLeft from '../assets/bg_left.png'
 import bgRight from '../assets/bg_right.png'
 import Layout from '../components/layout.tsx'
-import RsvpTable from '../components/rsvpTable.tsx'
+import RsvpTable from '../components/rsvp/rsvpTable.tsx'
 import { useState } from 'react'
 import BackButton from '../components/backButton.tsx'
 

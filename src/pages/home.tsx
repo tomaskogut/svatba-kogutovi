@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Hero from '../components/hero.tsx'
-import Rsvp from '../components/rsvp.tsx'
+import Rsvp from '../components/rsvp/rsvp.tsx'
 import Details from '../components/details.tsx'
 import Footer from '../components/footer.tsx'
 import Layout from '../components/layout.tsx'
