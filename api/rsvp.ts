@@ -16,7 +16,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const db = client.db('svatba')
     const collection = db.collection('rsvp')
 
-    const { name, email, adults, kids, note } = req.body
+    const { name, email, adults, kids, attendanceType, note } = req.body
     const existing = await collection.findOne({ email })
 
     if (existing) {
@@ -30,6 +30,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       email,
       adults,
       kids,
+      attendanceType,
       note,
       createdAt: new Date(),
     })

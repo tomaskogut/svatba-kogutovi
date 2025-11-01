@@ -5,12 +5,13 @@ export default function Rsvp() {
   const [email, setEmail] = useState('')
   const [adults, setAdults] = useState(0)
   const [children, setChildren] = useState(0)
+  const [attendanceType, setAttendanceType] = useState('Obřad')
   const [notes, setNotes] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    const data = { name, email, adults, children, notes }
+    const data = { name, email, adults, children, attendanceType, notes }
 
     console.log('env: ', import.meta.env.MODE)
     try {
@@ -40,7 +41,7 @@ export default function Rsvp() {
   return (
     <section id="rsvp" className="flex flex-col items-center justify-center text-center px-4 py-12">
       <h2 className="text-3xl font-semibold mb-2">Potvrďte svou účast</h2>
-      <p className="mb-6 text-gray-700">Dejte nám vědět, jestli dorazíte – budeme se těšit!</p>
+      <p className="mb-4 text-gray-700">Dejte nám vědět, jestli dorazíte – budeme se těšit!</p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md w-full">
         <input
@@ -57,10 +58,9 @@ export default function Rsvp() {
           onChange={(e) => setEmail(e.target.value)}
           className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#d497d5]"
         />
-
         <div className="flex gap-4">
           <div className="flex-1 flex flex-col">
-            <label className="font-medium text-left mb-1">Počet dospělých</label>
+            <label className="font-medium text-left mb-1 ml-1">Počet dospělých</label>
             <input
               type="number"
               min={0}
@@ -71,8 +71,8 @@ export default function Rsvp() {
             />
           </div>
 
-          <div className="flex-1 flex flex-col">
-            <label className="font-medium text-left mb-1">Počet dětí nad 4 roky</label>
+          <div className="flex-1 flex flex-col flex-gap-4">
+            <label className="font-medium text-left mb-1 ml-1">Počet dětí nad 4 roky</label>
             <input
               type="number"
               min={0}
@@ -83,6 +83,37 @@ export default function Rsvp() {
             />
           </div>
         </div>
+        <div className="flex flex-1 flex-col">
+          <label className="font-medium text-left mb-1 ml-1">Účast</label>
+          <div className="relative">
+            <select
+              value={attendanceType}
+              onChange={(e) => setAttendanceType(e.target.value)}
+              className="appearance-none border rounded-lg p-3 pr-10 w-full focus:outline-none focus:ring-2 focus:ring-[#d497d5]"
+            >
+              <option value="obřad">Obřad</option>
+              <option value="obřad / oběd">Obřad / oběd</option>
+              <option value="obřad / večerní raut">Obřad / večerní raut</option>
+              <option value="obřad / oběd / večerní raut">Obřad / oběd / večerní raut</option>
+              <option value="nezúčastním se">Nezúčastním se</option>
+            </select>
+
+            <svg
+              className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
 
         <textarea
           placeholder="Poznámky / alergie / vegetarián (volitelné)"
@@ -90,7 +121,6 @@ export default function Rsvp() {
           onChange={(e) => setNotes(e.target.value)}
           className="border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#d497d5] resize-none"
         />
-
         <button
           type="submit"
           className="bg-[#d497d5] text-white rounded-lg py-3 hover:bg-[#a777a8] transition mt-2"

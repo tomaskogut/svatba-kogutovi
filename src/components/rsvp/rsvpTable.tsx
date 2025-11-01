@@ -8,6 +8,7 @@ type RsvpRecord = {
   email: string
   adults: number
   kids: number
+  attendanceType: string
   note?: string
   createdAt: string
 }
@@ -51,11 +52,12 @@ export default function RsvpTable() {
     <div className="max-w-6xl mx-auto my-8 px-4">
       <BackButton />
 
-      <div className="grid grid-cols-5 gap-4 bg-[#d497d5] text-white px-4 py-3 rounded-t-lg font-semibold">
+      <div className="grid grid-cols-6 gap-4 bg-[#d497d5] text-white px-4 py-3 rounded-t-lg font-semibold">
         <div>Jméno</div>
         <div>Email</div>
         <div className="text-center">Dospělí</div>
         <div className="text-center">Děti</div>
+        <div className="text-center">Typ účasti</div>
         <div>Poznámky</div>
       </div>
 
