@@ -128,9 +128,11 @@ export default function GoogleMap() {
   }, [])
 
   return (
-    <div
-      ref={mapElementRef}
-      className="w-full h-64 md:h-96 lg:h-[500px] max-w-4xl mx-auto my-8 rounded-3xl drop-shadow-2xl overflow-hidden"
-    ></div>
+    <div className="px-4">
+      <div
+        ref={mapElementRef}
+        className="w-full max-w-4xl mx-auto h-64 md:h-96 lg:h-[500px] my-8 rounded-3xl drop-shadow-2xl overflow-hidden"
+      ></div>
+    </div>
   )
 }
