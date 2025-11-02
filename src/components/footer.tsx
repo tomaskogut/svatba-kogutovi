@@ -1,5 +1,6 @@
 import GitHubIcon from '../assets/github.png'
 import LinkedInIcon from '../assets/linkedin.png'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -7,6 +8,7 @@ export default function Footer() {
       <hr className="border-[#d497d5]/30 w-full max-w-4xl mx-auto " />
       <div className="text-[#d497d5] m-2 flex justify-center items-center gap-2">
         <span>© 2025 Tomáš Kogut |</span>
+        <Link to="/attendees">admin přístup |</Link>
         <a href="https://github.com/tomaskogut" target="_blank" rel="noopener noreferrer">
           <img
             src={GitHubIcon}
