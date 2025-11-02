@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { parse } from 'cookie'
 
-const uri = process.env.MONGODB_URI as string
+const uri = process.env.ATLAS_MONGODB_URI as string
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const cookies = parse(req.headers.cookie || '')
