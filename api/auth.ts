@@ -8,9 +8,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { password } = req.body
 
-  console.log('SECRET: ', SECRET)
-  console.log('password: ', password)
-
   if (!SECRET) {
     return res.status(500).json({ message: 'Server misconfigured' })
   }

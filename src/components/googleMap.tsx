@@ -9,15 +9,15 @@ declare global {
 
 const MARKERS = [
   {
-    position: { lat: 49.5391952, lng: 18.0229956 },
+    position: { lat: 49.53913111032337, lng: 18.02258867038681 },
     title: 'Místo obřadu',
   },
   {
-    position: { lat: 49.5364247, lng: 18.0220248 },
+    position: { lat: 49.5363135422419, lng: 18.021691401549745 },
     title: 'Místo hostiny',
   },
   {
-    position: { lat: 49.538017, lng: 18.023821 },
+    position: { lat: 49.5379443920578, lng: 18.023611587938632 },
     title: 'Parkoviště č.1',
   },
   {
@@ -33,8 +33,8 @@ async function initializeMap(element: HTMLElement): Promise<google.maps.Map> {
   )) as google.maps.MarkerLibrary
 
   const map = new Map(element, {
-    center: { lat: 49.5376569694194, lng: 18.023989106547933 },
-    zoom: 16,
+    center: { lat: 49.53755340919777, lng: 18.02328398394039 },
+    zoom: 17,
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: false,
