@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Modal from './modal.tsx'
 
 export default function Rsvp() {
   const [name, setName] = useState('')
@@ -7,13 +8,13 @@ export default function Rsvp() {
   const [kids, setChildren] = useState(0)
   const [attendanceType, setAttendanceType] = useState('Obřad')
   const [notes, setNotes] = useState('')
+  const [modalMessage, setModalMessage] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     const data = { name, email, adults, kids, attendanceType, notes }
 
-    console.log('env: ', import.meta.env.MODE)
     try {
       const res = await fetch('/api/rsvp', {
         method: 'POST',
@@ -23,17 +24,17 @@ export default function Rsvp() {
 
       const result = await res.json()
       if (res.ok) {
-        alert('Díky, vaše účast byla zaznamenána!')
+        setModalMessage('Díky, vaše účast byla zaznamenána!')
         setName('')
         setEmail('')
         setAdults(1)
         setChildren(0)
         setNotes('')
       } else {
-        alert(`Chyba: ${result.message}`)
+        setModalMessage(`Chyba: ${result.message}`)
       }
     } catch (err) {
-      alert('Došlo k chybě, zkuste to prosím později.')
+      setModalMessage('Došlo k chybě, zkuste to prosím později.')
       console.error(err)
     }
   }
@@ -129,6 +130,14 @@ export default function Rsvp() {
         </button>
       </form>
       <div className="h-[256px]"></div>
+
+      {modalMessage && (
+        <Modal
+          title="Odpověď serveru"
+          message={modalMessage}
+          onClose={() => setModalMessage(null)}
+        />
+      )}
     </section>
   )
 }
