@@ -2,8 +2,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { MongoClient } from 'mongodb'
 import { ulid } from 'ulid'
 
-const uri = process.env.MONGODB_URI as string
-console.log('MONGODB_URI: ', uri)
+const uri = process.env.ATLAS_MONGODB_URI as string
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
