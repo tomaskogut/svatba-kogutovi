@@ -56,7 +56,7 @@ export default function Attendees() {
   }
 
   return (
-    <Layout leftImage={bgLeft} rightImage={bgRight}>
+    <Layout leftImage={bgLeft} rightImage={bgRight} mobileImage={bgImage}>
       <main className="min-h-screen py-20">
         <h1 className="text-[3rem] font-alexbrush text-center mb-10">Přihlášení účastníci</h1>
         <RsvpTable />
