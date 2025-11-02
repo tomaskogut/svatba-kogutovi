@@ -17,7 +17,7 @@ export default function RsvpTableRow({ record, index }: RsvpTableRowProps) {
       <div className="text-center">{record.adults}</div>
       <div className="text-center">{record.kids}</div>
       <div className="text-center">{record.attendanceType}</div>
-      <div className="text-gray-600 break-words">{record.note || '—'}</div>
+      <div className="text-gray-600 break-words">{record.notes || '—'}</div>
     </div>
   )
 }

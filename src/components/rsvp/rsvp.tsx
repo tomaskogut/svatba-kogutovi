@@ -4,14 +4,14 @@ export default function Rsvp() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [adults, setAdults] = useState(0)
-  const [children, setChildren] = useState(0)
+  const [kids, setChildren] = useState(0)
   const [attendanceType, setAttendanceType] = useState('Obřad')
   const [notes, setNotes] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    const data = { name, email, adults, children, attendanceType, notes }
+    const data = { name, email, adults, kids, attendanceType, notes }
 
     console.log('env: ', import.meta.env.MODE)
     try {
@@ -77,7 +77,7 @@ export default function Rsvp() {
               type="number"
               min={0}
               max={10}
-              value={children}
+              value={kids}
               onChange={(e) => setChildren(Number(e.target.value))}
               className="border rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-[#d497d5]"
             />

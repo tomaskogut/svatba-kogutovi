@@ -3,7 +3,8 @@ import bgRight from '../assets/bg_right.png'
 import Layout from '../components/layout.tsx'
 import RsvpTable from '../components/rsvp/rsvpTable.tsx'
 import { useState } from 'react'
-import BackButton from '../components/backButton.tsx'
+import BackButton from '../components/buttons/backButton.tsx'
+import bgImage from '../assets/background.png'
 
 export default function Attendees() {
   const [authorized, setAuthorized] = useState(false)
@@ -29,7 +30,7 @@ export default function Attendees() {
 
   if (!authorized) {
     return (
-      <Layout leftImage={bgLeft} rightImage={bgRight}>
+      <Layout leftImage={bgLeft} rightImage={bgRight} mobileImage={bgImage}>
         <main className="flex flex-col py-20 min-h-screen">
           <BackButton />
           <h1 className="text-[3rem] font-alexbrush text-center mb-5">Přístup pro organizátory</h1>

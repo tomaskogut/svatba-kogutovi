@@ -10,7 +10,7 @@ type LayoutProps = {
 export default function Layout({ children, leftImage, rightImage, mobileImage }: LayoutProps) {
   return (
     <div className="relative">
-      <div className="hidden lg:flex fixed inset-0 pointer-events-none ">
+      <div className="hidden ipadpro:flex fixed inset-0 pointer-events-none ">
         <div
           className="flex-1 bg-cover bg-center"
           style={{
@@ -34,16 +34,27 @@ export default function Layout({ children, leftImage, rightImage, mobileImage }:
       </div>
 
       <div
-        className="lg:hidden fixed inset-0 bg-cover bg-center"
+        className="ipadpro:hidden fixed inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${mobileImage || leftImage || rightImage})`,
         }}
       />
 
-      <div className="fixed inset-0 bg-[#d497d5]/5 pointer-events-none" />
+      <div className="hidden ipadpro:block fixed inset-0 bg-[#d497d5]/10 pointer-events-none" />
 
-      <div className="relative z-10 w-full lg:w-[768px] lg:max-w-[1200px] mx-auto min-h-screen">
-        {children}
+      <div className="relative z-10 w-full ipadpro:w-[768px] ipadpro:max-w-[1200px] mx-auto min-h-screen">
+        <div
+          className="absolute inset-0 z-0 pointer-events-none bg-white/50 ipadpro:bg-transparent "
+          style={{
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+          }}
+        />
+        <div className="ipadpro:hidden block fixed inset-0 bg-[#d497d5]/10 pointer-events-none" />
+
+        <div className="relative z-10">{children}</div>
       </div>
     </div>
   )

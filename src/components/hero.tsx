@@ -11,10 +11,14 @@ export default function Hero() {
         </p>
         <p className="text-sm leading-loose">Genesis 2.18</p>
 
-        <div className="m-8 text-[6rem] font-alexbrush text-center flex justify-center items-center gap-4">
-          <span className="inline-block animate-fadeInLeft">Tomáš</span>
-          <span className="inline-block animate-fadeIn text-[4rem]">&</span>
-          <span className="inline-block animate-fadeInRight">Markéta</span>
+        <div className=" text-[6rem] font-alexbrush text-center flex flex-col md:flex-row justify-center items-center gap:4">
+          <span className="inline-block animate-fadeInLeft text-[4rem] md:text-[6rem]">Tomáš</span>
+          <span className="inline-block animate-fadeIn text-[2rem] md:text-[4rem] md:m-4 -m-6">
+            &
+          </span>
+          <span className="inline-block animate-fadeInRight text-[4rem] md:text-[6rem]">
+            Markéta
+          </span>
         </div>
 
         <p className="text-xl ">
@@ -26,7 +30,7 @@ export default function Hero() {
         <p className="text-xl ">Evangelický kostel v Hodslavicích</p>
         <p className="text-base mb-20">v 11 hodin</p>
 
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-center gap-4">
           <a
             href={'#details'}
             className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]"

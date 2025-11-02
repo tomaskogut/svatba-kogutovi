@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import BackButton from '../backButton.tsx'
+import BackButton from '../buttons/backButton.tsx'
 import RsvpTableRow from './rsvpTableRow.tsx'
 
 type RsvpRecord = {
@@ -9,7 +9,7 @@ type RsvpRecord = {
   adults: number
   kids: number
   attendanceType: string
-  note?: string
+  notes?: string
   createdAt: string
 }
 

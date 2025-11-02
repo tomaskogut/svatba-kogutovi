@@ -26,6 +26,9 @@ export default {
         fadeInLeft: 'fadeInLeft 0.6s ease-out backwards',
         fadeInRight: 'fadeInRight 0.6s ease-out backwards',
       },
+      screens: {
+        ipadpro: '1366px',
+      },
     },
   },
 

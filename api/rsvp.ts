@@ -2,7 +2,8 @@ import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { MongoClient } from 'mongodb'
 import { ulid } from 'ulid'
 
-const uri = process.env.MONGOATLAS_URI as string
+const uri = process.env.MONGODB_URI as string
+console.log('MONGODB_URI: ', uri)
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
@@ -16,7 +17,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const db = client.db('svatba')
     const collection = db.collection('rsvp')
 
-    const { name, email, adults, kids, attendanceType, note } = req.body
+    const { name, email, adults, kids, attendanceType, notes } = req.body
     const existing = await collection.findOne({ email })
 
     if (existing) {
@@ -31,7 +32,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       adults,
       kids,
       attendanceType,
-      note,
+      notes,
       createdAt: new Date(),
     })
 
