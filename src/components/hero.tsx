@@ -32,20 +32,20 @@ export default function Hero() {
 
         <div className="flex flex-col items-center sm:flex-row sm:justify-center gap-4">
           <a
-            href={'#details'}
-            className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]"
-          >
-            Více info
-          </a>
-          <a
             href={'#rsvp'}
-            className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]"
+            className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg transition-colors hover:bg-[#a777a8]"
           >
             Potvrď účast
           </a>
+          <a
+            href={'details'}
+            className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg transition-colors hover:bg-[#a777a8]"
+          >
+            Více info
+          </a>
           <Link
             to="/gallery"
-            className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg font-semibold transition-colors hover:bg-[#a777a8]"
+            className="inline-block px-5 py-3 w-36 bg-[#d497d5] text-white rounded-lg transition-colors hover:bg-[#a777a8]"
           >
             Galerie
           </Link>

@@ -10,19 +10,19 @@ declare global {
 const MARKERS = [
   {
     position: { lat: 49.53913111032337, lng: 18.02258867038681 },
-    title: 'Místo obřadu',
+    title: '1) Místo obřadu',
   },
   {
     position: { lat: 49.5363135422419, lng: 18.021691401549745 },
-    title: 'Místo hostiny',
+    title: '2) Místo hostiny',
   },
   {
     position: { lat: 49.5379443920578, lng: 18.023611587938632 },
-    title: 'Parkoviště č.1',
+    title: '3) Parkoviště č.1',
   },
   {
     position: { lat: 49.53741752195716, lng: 18.022178117287527 },
-    title: 'Parkoviště č.2',
+    title: '4) Parkoviště č.2',
   },
 ] as const
 
