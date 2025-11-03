@@ -15,16 +15,6 @@ export default function Details() {
         <li>Bod č. 2 - Společenský dům - místo hostiny a večerního rautu</li>
         <li>Bod č. 3 - primární parkoviště - pro cca x-vozidel</li>
         <li>Bod č. 4 - sekundární parkoviště </li>
-        <li>Bod č. 5 - terciární parkoviště </li>
-        <li>Bod č. 6 - kvartérní parkoviště </li>
-        <li>Bod č. 7 - kvintérní parkoviště </li>
-        <li>Bod č. 8 - sextérní parkoviště </li>
-        <li>Bod č. 9 - septérní parkoviště </li>
-        <li>Bod č. 10 - okterní parkoviště </li>
-        <li>Bod č. 11 - nonérní parkoviště </li>
-        <li>Bod č. 12 - decérní parkoviště </li>
-        <li>Bod č. 13 - undecérní parkoviště </li>
-        <li>Bod č. 14 - duodecérní parkoviště </li>
       </ul>
 
       <GoogleMap />
@@ -42,13 +32,6 @@ export default function Details() {
         <li>16:30 - Večerní raut</li>
         <li>17:00 - Společenské hry</li>
         <li>18:00 - Živá hudba / tanec</li>
-        <li>19:00 - Podávání slivovice</li>
-        <li>20:00 - Uložení dětí na kutě</li>
-        <li>20:30 - Volné aktivity</li>
-        <li>21:00 - Začátek neřízené zábavy</li>
-        <li>22:00 - Kejklíři, polikači ohňů, břišní tanečnice a dobová hudba</li>
-        <li>23:00 - Šarvátky a intenzivní opilecké rozhovory</li>
-        <li>00:00 - Kdo toho nejvíc vypije, podpálení společenského domu a rušení nočního klidu</li>
       </ul>
 
       <p className="italic text-left m-4 mx-4">
@@ -56,14 +39,6 @@ export default function Details() {
       </p>
 
       <ul className="list-disc mx-4 pl-6 space-y-2 text-left">
-        <li>zážitkové sekání pole traktorem</li>
-        <li>plevání zahrádky na 100 způsobů</li>
-        <li>sekání dříví na zimu / složení uhlí</li>
-        <li>Výmalba bytu pro novomanžele</li>
-        <li>Dobročinná sbírka</li>
-        <li>Oprava fasády Kostela</li>
-        <li>Krmení slepic</li>
-        <li>Stánková evangelizace Hodslavic</li>
         <li>...</li>
       </ul>
 
