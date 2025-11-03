@@ -7,8 +7,8 @@ export default function Footer() {
     <section className="items-center justify-center text-center px-4">
       <hr className="border-[#d497d5]/30 w-full max-w-4xl mx-auto " />
       <div className="text-[#d497d5] m-2 flex justify-center items-center gap-2">
-        <span>© 2025 Tomáš Kogut |</span>
-        <Link to="/attendees">admin přístup |</Link>
+        <span>©&nbsp;2025&nbsp;Tomáš&nbsp;Kogut&nbsp;|</span>
+        <Link to="/attendees">admin&nbsp;přístup&nbsp;|</Link>
         <a href="https://github.com/tomaskogut" target="_blank" rel="noopener noreferrer">
           <img
             src={GitHubIcon}
