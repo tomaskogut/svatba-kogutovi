@@ -12,12 +12,16 @@ export default function Hero() {
         <p className="text-sm leading-loose">Genesis 2.18</p>
 
         <div className=" text-[6rem] font-alexbrush text-center flex flex-col md:flex-row justify-center items-center gap:4">
-          <span className="inline-block animate-fadeInLeft text-[4rem] md:text-[6rem]">Tomáš</span>
+          <span className="inline-block animate-fadeInLeft text-[4rem] md:text-[6rem]">
+            Tomáš
+            <div className="text-[2rem] -mt-10">Kudělka</div>
+          </span>
           <span className="inline-block animate-fadeIn text-[2rem] md:text-[4rem] md:m-4 -m-6">
             &
           </span>
           <span className="inline-block animate-fadeInRight text-[4rem] md:text-[6rem]">
             Markéta
+            <div className="text-[2rem] -mt-10">Kogutová</div>
           </span>
         </div>
 
