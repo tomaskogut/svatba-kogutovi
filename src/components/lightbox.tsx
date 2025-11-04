@@ -1,45 +1,76 @@
-import { useState } from 'react'
-import Lightbox from 'yet-another-react-lightbox'
-import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
-import Captions from 'yet-another-react-lightbox/plugins/captions'
+import { useState, useEffect } from 'react'
+import { Gallery, Item } from 'react-photoswipe-gallery'
+import 'photoswipe/style.css'
 
-import 'yet-another-react-lightbox/styles.css'
-import 'yet-another-react-lightbox/plugins/thumbnails.css'
-import 'yet-another-react-lightbox/plugins/captions.css'
+const imageCount = 20
+const imageUrls = Array.from({ length: imageCount }, (_, i) => `/img/img${i + 1}.jpeg`)
 
-const images = Array.from({ length: 20 }, (_, i) => ({
-  src: `/img/img${i + 1}.jpeg`,
-  description: `Obrázek ${i + 1}`,
-}))
+export default function DynamicGallery() {
+  interface GalleryImage {
+    src: string
+    thumbnail: string
+    width: number
+    height: number
+    title?: string
+  }
 
-export default function LightBox() {
-  const [open, setOpen] = useState(false)
-  const [index, setIndex] = useState(0)
+  const [images, setImages] = useState<GalleryImage[]>([])
+
+  useEffect(() => {
+    Promise.all(
+      imageUrls.map(async (url) => {
+        const img = new Image()
+        img.src = url
+
+        await new Promise((resolve, reject) => {
+          img.onload = resolve
+          img.onerror = reject
+        })
+
+        return {
+          src: url,
+          thumbnail: url,
+          width: img.naturalWidth,
+          height: img.naturalHeight,
+          title: url.split('/').pop(),
+        }
+      })
+    ).then(setImages)
+  }, [])
 
   return (
     <div className="p-8 min-h-screen">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {images.map((img, i) => (
-          <img
-            key={i}
-            src={img.src}
-            alt={img.description}
-            onClick={() => {
-              setIndex(i)
-              setOpen(true)
-            }}
-            className="rounded-lg cursor-pointer hover:scale-105 transition-transform shadow-sm"
-          />
-        ))}
-      </div>
-
-      <Lightbox
-        open={open}
-        index={index}
-        close={() => setOpen(false)}
-        slides={images}
-        plugins={[Thumbnails, Captions]}
-      />
+      {images.length === 0 ? (
+        <p>Načítám obrázky...</p>
+      ) : (
+        <Gallery>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {images.map((img, i) => (
+              <Item
+                key={i}
+                original={img.src}
+                thumbnail={img.thumbnail}
+                width={img.width}
+                height={img.height}
+              >
+                {({ ref, open }) => (
+                  <div
+                    ref={ref}
+                    onClick={open}
+                    className="w-full h-48 overflow-hidden rounded-lg cursor-pointer shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-300"
+                  >
+                    <img
+                      src={img.thumbnail}
+                      alt={img.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+              </Item>
+            ))}
+          </div>
+        </Gallery>
+      )}
     </div>
   )
 }
