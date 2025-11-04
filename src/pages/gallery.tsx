@@ -3,6 +3,7 @@ import bgRight from '../assets/bg_right.png'
 import bgImage from '../assets/background.png'
 import Layout from '../components/layout.tsx'
 import BackButton from '../components/buttons/backButton.tsx'
+import LightBox from '../components/lightbox.tsx'
 
 export default function Gallery() {
   return (
@@ -11,8 +12,7 @@ export default function Gallery() {
         <div className="text-center text-black overflow-hidden">
           <BackButton />
           <h1 className="text-[3rem] font-alexbrush mb-14 mt-20">Galerie</h1>
-
-          <p>Fotky přidáme po svatbě 📸</p>
+          <LightBox />
         </div>
       </main>
     </Layout>
