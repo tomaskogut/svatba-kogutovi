@@ -44,7 +44,7 @@ export default function DynamicGallery() {
         <p>Načítám obrázky...</p>
       ) : (
         <Gallery>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {images.map((img, i) => (
               <Item
                 key={i}
