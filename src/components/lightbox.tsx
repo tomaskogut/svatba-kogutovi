@@ -17,7 +17,7 @@ export default function LightBox() {
   const [index, setIndex] = useState(0)
 
   return (
-    <div className="p-8 bg-gray-100 min-h-screen">
+    <div className="p-8 min-h-screen">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {images.map((img, i) => (
           <img
