@@ -11,7 +11,7 @@ export default function Gallery() {
       <main id="gallery" className="scroll-smooth items-center justify-center">
         <div className="text-center text-black overflow-hidden">
           <BackButton />
-          <h1 className="text-[3rem] font-alexbrush mb-14 mt-20">Galerie</h1>
+          <h1 className="text-[3rem] font-alexbrush mb-14 mt-20">t("gallery.title")</h1>
           <LightBox />
         </div>
       </main>
