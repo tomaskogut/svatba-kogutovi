@@ -11,9 +11,9 @@ type LayoutProps = {
 export default function Layout({ children, leftImage, rightImage, mobileImage }: LayoutProps) {
   return (
     <div className="relative">
-      <div className="fixed top-4 right-4 z-20 flex gap-2 ipadpro:hidden">
-        <LocaleButton />
-      </div>
+      {/*<div className="fixed top-4 right-4 z-20 flex gap-2 ipadpro:hidden">*/}
+      {/*  <LocaleButton />*/}
+      {/*</div>*/}
 
       <div className="hidden ipadpro:flex fixed inset-0 ">
         <div

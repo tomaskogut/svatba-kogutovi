@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { type FormEvent, useState } from 'react'
 import Modal from './modal.tsx'
 
 export default function Rsvp() {
@@ -10,7 +10,7 @@ export default function Rsvp() {
   const [notes, setNotes] = useState('')
   const [modalMessage, setModalMessage] = useState<string | null>(null)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
 
     const data = { name, email, adults, kids, attendanceType, notes }
@@ -73,7 +73,7 @@ export default function Rsvp() {
           </div>
 
           <div className="flex-1 flex flex-col flex-gap-4">
-            <label className="font-medium text-left mb-1 ml-1">Počet dětí nad 4 roky</label>
+            <label className="font-medium text-left mb-1 ml-1">Počet dětí s vlastní porcí</label>
             <input
               type="number"
               min={0}
@@ -92,10 +92,7 @@ export default function Rsvp() {
               onChange={(e) => setAttendanceType(e.target.value)}
               className="appearance-none border rounded-lg p-3 pr-10 w-full focus:outline-none focus:ring-2 focus:ring-[#d497d5]"
             >
-              <option value="obřad">Obřad</option>
               <option value="obřad / oběd">Obřad / oběd</option>
-              <option value="obřad / večerní raut">Obřad / večerní raut</option>
-              <option value="obřad / oběd / večerní raut">Obřad / oběd / večerní raut</option>
               <option value="nezúčastním se">Nezúčastním se</option>
             </select>
 

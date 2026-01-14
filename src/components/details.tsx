@@ -20,18 +20,14 @@ export default function Details() {
       <GoogleMap />
 
       <h2 className="text-left m-4 text-xl">Program: </h2>
-      <p className="italic text-left mb-4 mx-4">
-        časy začínající obědem jsou přibližné, výjma rautu, který bude z organizačních důvodu
-        dodržen.
-      </p>
+      {/*<p className="italic text-left mb-4 mx-4">*/}
+      {/*  časy začínající obědem jsou přibližné, výjma rautu, který bude z organizačních důvodu*/}
+      {/*  dodržen.*/}
+      {/*</p>*/}
       <ul className="list-none mx-4 pl-6 space-y-2 text-left">
-        <li>11:00 - Začínáme slavnostním obřadem v Kostele</li>
-        <li>13:00 - Oběd ve společenském domě pro zvané hosty</li>
-        <li>15:00 - Focení novomanželů</li>
-        <li>16:00 - Příchod hostů na večerní raut </li>
-        <li>16:30 - Večerní raut</li>
-        <li>17:00 - Společenské hry</li>
-        <li>18:00 - Živá hudba / tanec</li>
+        <li>13:00 - Slavnostní obřad v Kostele</li>
+        <li>15:00 - Oběd ve společenském domě pro zvané hosty</li>
+        <li>19:00 - Večerní raut</li>
       </ul>
 
       <p className="italic text-left m-4 mx-4">
