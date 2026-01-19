@@ -28,7 +28,7 @@ export default function Hero() {
 
         <p className="text-4xl font-alexbrush m-7">2.5.2026</p>
         <p className="text-xl ">Evangelický kostel v Hodslavicích</p>
-        <p className="text-base mb-20">v 11 hodin</p>
+        <p className="text-base mb-20">v 13 hodin</p>
 
         <div className="flex flex-col items-center sm:flex-row sm:justify-center gap-4">
           <a
