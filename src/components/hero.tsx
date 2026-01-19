@@ -50,8 +50,6 @@ export default function Hero() {
             Galerie
           </Link>
         </div>
-
-        <div className="h-[256px]"></div>
       </div>
     </section>
   )
