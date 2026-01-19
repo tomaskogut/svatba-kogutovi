@@ -41,6 +41,7 @@ export default function Rsvp() {
 
   return (
     <section id="rsvp" className="flex flex-col items-center justify-center text-center px-4 py-12">
+      <div className="h-[256px]"></div>
       <h2 className="text-3xl mb-2">Potvrďte svou účast</h2>
       <p className="mb-4 text-gray-700">Dejte nám vědět, jestli dorazíte – budeme se těšit!</p>
 

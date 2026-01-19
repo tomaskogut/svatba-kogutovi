@@ -22,6 +22,7 @@ export default function ScrollToTopButton() {
         ${visible ? 'opacity-100' : 'opacity-0'}
         left-1/2 -translate-x-1/2 
         md:right-1/2 md:translate-x-[384px] md:left-auto
+        z-50
         `}
     >
       <button
