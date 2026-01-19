@@ -30,13 +30,13 @@ export default function Details() {
         <li>19:00 - Večerní raut</li>
       </ul>
 
-      <p className="italic text-left m-4 mx-4">
-        Pro hosty zvané od večerního rautu navrhujeme možné aktivity:
-      </p>
+      {/*<p className="italic text-left m-4 mx-4">*/}
+      {/*  Pro hosty zvané od večerního rautu navrhujeme možné aktivity:*/}
+      {/*</p>*/}
 
-      <ul className="list-disc mx-4 pl-6 space-y-2 text-left">
-        <li>...</li>
-      </ul>
+      {/*<ul className="list-disc mx-4 pl-6 space-y-2 text-left">*/}
+      {/*  <li>...</li>*/}
+      {/*</ul>*/}
 
       <div className="h-[256px]"></div>
     </section>
