@@ -93,7 +93,9 @@ export default function Rsvp() {
               onChange={(e) => setAttendanceType(e.target.value)}
               className="appearance-none border rounded-lg p-3 pr-10 w-full focus:outline-none focus:ring-2 focus:ring-[#d497d5]"
             >
+              <option value="obřad / oběd">Obřad / oběd / večerní raut</option>
               <option value="obřad / oběd">Obřad / oběd</option>
+              <option value="obřad / oběd">Obřad / večerní raut</option>
               <option value="nezúčastním se">Nezúčastním se</option>
             </select>
 
