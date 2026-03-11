@@ -4,9 +4,9 @@ import Modal from './modal.tsx'
 export default function Rsvp() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [adults, setAdults] = useState(0)
+  const [adults, setAdults] = useState(1)
   const [kids, setChildren] = useState(0)
-  const [attendanceType, setAttendanceType] = useState('Obřad')
+  const [attendanceType, setAttendanceType] = useState('')
   const [notes, setNotes] = useState('')
   const [modalMessage, setModalMessage] = useState<string | null>(null)
 
@@ -27,8 +27,8 @@ export default function Rsvp() {
         setModalMessage('Díky, vaše účast byla zaznamenána!')
         setName('')
         setEmail('')
-        setAdults(1)
-        setChildren(0)
+        setAdults(0)
+        setChildren(1)
         setNotes('')
       } else {
         setModalMessage(`Chyba: ${result.message}`)
@@ -91,8 +91,11 @@ export default function Rsvp() {
             <select
               value={attendanceType}
               onChange={(e) => setAttendanceType(e.target.value)}
-              className="appearance-none border rounded-lg p-3 pr-10 w-full focus:outline-none focus:ring-2 focus:ring-[#d497d5]"
+              required
             >
+              <option value="" disabled>
+                Vyberte typ účasti
+              </option>
               <option value="Obřad / oběd / večerní raut">Obřad / oběd / večerní raut</option>
               <option value="obřad / oběd">Obřad / oběd</option>
               <option value="Obřad / večerní raut">Obřad / večerní raut</option>
