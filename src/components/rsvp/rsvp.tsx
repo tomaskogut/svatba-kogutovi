@@ -4,7 +4,7 @@ import Modal from './modal.tsx'
 export default function Rsvp() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [adults, setAdults] = useState(1)
+  const [adults, setAdults] = useState(0)
   const [kids, setChildren] = useState(0)
   const [attendanceType, setAttendanceType] = useState('')
   const [notes, setNotes] = useState('')
@@ -28,7 +28,7 @@ export default function Rsvp() {
         setName('')
         setEmail('')
         setAdults(0)
-        setChildren(1)
+        setChildren(0)
         setNotes('')
       } else {
         setModalMessage(`Chyba: ${result.message}`)
